@@ -1,0 +1,27 @@
+{
+  "name": "build-bunny",
+  "version": "0.0.1",
+  "author": "gotbadger <p.j.hayton@hotmail.com>",
+  "description": "integrates with wizz.cc to send TTS messages to your nabaztag",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gotbadger/build-bunny.git"
+  },
+  "keywords": [
+    "data",
+    "http",
+    "server"
+  ],
+  "dependencies" : {
+    "coffee-script": "1.3.3",
+    "express"    :  "3.0.0beta4",
+    "request"    :  "2.10.0",
+    "q"          :  "0.8.6"
+  },
+  "noAnalyze": true,
+  "license": "MIT",
+  "engines": {
+    "node": "0.8.7",
+    "npm":  "1.0.x"
+  }
+}
