@@ -2,9 +2,10 @@ express = require('express')
 port = if process.env.PORT? then process.env.PORT else 3000
 
 #output methods
-Wizz = require('./output/Wizz')
+Wizz      = require('./output/Wizz')
 #webhooks
-Basic = require('./webhooks/Basic')
+Basic     = require('./webhooks/Basic')
+Github    = require('./webhooks/Github')
 
 
 #check for some envs
@@ -26,6 +27,7 @@ wizzConnection = new Wizz(serial,token,'Graham')
 
 responders =
   'basic' : new Basic(wizzConnection)
+  'github': new Github(wizzConnection,"refs/heads/master")
 
 
 app = express.createServer();
