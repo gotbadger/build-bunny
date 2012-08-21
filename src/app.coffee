@@ -27,7 +27,7 @@ wizzConnection = new Wizz(serial,token,'Graham')
 
 responders =
   'basic' : new Basic(wizzConnection)
-  'github': new Github(wizzConnection,"refs/heads/master")
+  'github': new Github(wizzConnection)
 
 
 app = express.createServer();
@@ -53,7 +53,8 @@ app.post '/hook/:hook',auth,(req, res) ->
       res.end data.toString()
     ,(error) ->
       res.writeHead 500
-      res.end error.toString() 
+      res.end error.toString()
+      console.log error.toString() 
     .end()
 
 
